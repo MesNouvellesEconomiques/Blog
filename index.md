@@ -6,6 +6,6 @@ title: Blog
 
 just a pig dreaming of becoming a whale 2 ...
 
-# L evolution de mon portefeuille mois par mois
+# My stock portfolio evolution (monthly)
 
 [Evolution](MonthlyUpdate.md)

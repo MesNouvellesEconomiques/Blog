@@ -1,5 +1,5 @@
 # Long term
 [Long term](ALL.html)
 
-# Comparaison avec Mars
+# Compare with March
 [Comparaison](CompareMars.html)
