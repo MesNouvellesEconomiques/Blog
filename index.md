@@ -2,6 +2,7 @@
 layout: default
 title: Blog
 ---
-# test
+# Pig to Whale
 
-test
+just a pig dreaming of becoming a whale...
+
