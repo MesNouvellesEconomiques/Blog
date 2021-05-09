@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Blog
+title: Blog [SECTOR](sectors.md)
 ---
 # Pig to Whale
 
