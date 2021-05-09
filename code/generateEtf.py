@@ -17,16 +17,24 @@ def getEtfListForWrite(iEtfRaw):
     return etfFile
 
 def getEtfMatchingSector(iEtfsRaw, iOneSector):
+    aMatchingEtfs=[]
     for aOneEtf in iEtfsRaw:
-        if iOneSector["tags"] in iEtfsRaw["tags"]:
-            print(f"{aOneEtf} match")
+        #print (f"sector tags {iOneSector['tags']} and etf tags {aOneEtf['tags']}")
+        if all(tag in aOneEtf["tags"] for tag in iOneSector["tags"]):
+            print(f"ETF {aOneEtf['name']} match sector {iOneSector['theme']}")
+            aMatchingEtfs.append(aOneEtf)
+    return aMatchingEtfs
 
 def getSectorListForWrite(iSectorRaw, iEtfsRaw):
     SectorContent=""
     for aOneSector in iSectorRaw:
         SectorContent = SectorContent + "## " + aOneSector['theme'] + "\n" + aOneSector['description'] + "\n\n"
         # Find the ETF for this sector
-        getEtfMatchingSector(iEtfsRaw, aOneSector)
+        SectorContent = SectorContent + "### Matching ETFs: " + "\n"
+        aMatchinEtfs = getEtfMatchingSector(iEtfsRaw, aOneSector)
+        for aOneMatchingEtf in aMatchinEtfs:
+            SectorContent = SectorContent + f"* {aOneMatchingEtf['name']} \n"
+        SectorContent = SectorContent + "\n\n"
     return SectorContent
 
 def writeOutputFile(iDestFile, iContent):

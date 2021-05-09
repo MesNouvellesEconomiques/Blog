@@ -5,4 +5,4 @@
 [Fun](STOCKS_FUN.html)
 
 # Crypto
-[CRYPTO](CRYPTO.htlm)
+[CRYPTO](CRYPTO.html)
